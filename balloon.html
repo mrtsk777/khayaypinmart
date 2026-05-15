@@ -9,11 +9,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
         body { font-family: 'Pyidaungsu', sans-serif; background-color: #fafafa; }
-        .hero-bg {
-            background-linear-gradient: (rgba(0,0,0,0.6), rgba(0,0,0,0.7));
-            background-size: cover;
-            background-position: center;
-        }
         .gallery-img:hover { transform: scale(1.03); transition: all 0.4s ease; }
     </style>
 </head>
@@ -29,23 +24,22 @@
                 <a href="index.html" class="hover:text-amber-400 transition">ပင်မစာမျက်နှာ</a>
                 <a href="products.html" class="hover:text-amber-400 transition">ကုန်ပစ္စည်းများ</a>
                 <a href="balloon.html" class="text-white border-b-2 border-amber-400 pb-1">Balloon ခန်းမ</a>
-                <a href="#" class="hover:text-amber-400 transition">ဆက်သွယ်ရန်</a>
             </div>
             <div>
-                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-amber-950 px-5 py-2 rounded-full font-bold shadow-md transition text-sm">
-                    အခုပဲ ဘိုကင်တင်ရန်
+                <a href="#booking-section" class="bg-amber-500 hover:bg-amber-600 text-amber-950 px-5 py-2 rounded-full font-bold shadow-md transition text-sm">
+                    ဘိုကင်တင်ရန်
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (အဓိက ခန်းမကြီး မိတ်ဆက်) -->
+    <!-- Hero Section -->
     <header class="relative bg-amber-950 text-white py-24 px-4 text-center overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('images/kypballoon1.jpg');"></div>
         <div class="relative z-10 max-w-3xl mx-auto">
             <span class="text-amber-400 uppercase tracking-widest font-bold text-sm bg-amber-900/50 px-4 py-1.5 rounded-full border border-amber-700">Kha Yay Pin Mart (3rd Floor)</span>
             <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-4 text-amber-100 leading-snug">လူဦးရေ ၂၀၀ ဆံ့ ခန့်ညားထည်ဝါသော <br><span class="text-amber-400">Kha Yay Pin Balloon Hall</span></h1>
-            <p class="text-amber-200/80 text-lg mb-8 max-w-2xl mx-auto">မင်္ဂလာဧည့်ခံပွဲများ၊ မွေးနေ့ပွဲများ၊ ကုမ္ပဏီ Meeting များနှင့် အလှူမင်္ဂလာပွဲများကို အကောင်းဆုံးဝန်ဆောင်မှု၊ ခေတ်မီအသံစနစ်များဖြင့် ခန့်ခန့်ထည်ထည် ကျင်းပနိုင်ပါသည်။</p>
+            <p class="text-amber-200/80 text-base mb-8 max-w-2xl mx-auto">မင်္ဂလာဧည့်ခံပွဲများ၊ မွေးနေ့ပွဲများ၊ ကုမ္ပဏီ Meeting များနှင့် အလှူမင်္ဂလာပွဲများကို အကောင်းဆုံးဝန်ဆောင်မှု၊ ခေတ်မီအသံစနစ်များဖြင့် ခန့်ခန့်ထည်ထည် ကျင်းပနိုင်ပါသည်။</p>
             <div class="flex flex-wrap justify-center gap-6 text-sm text-amber-300">
                 <div class="flex items-center gap-2 bg-amber-900/40 px-4 py-2 rounded-lg border border-amber-800"><i class="fas fa-users text-amber-400"></i> လူဦးရေ ၂၀၀ ဆံ့</div>
                 <div class="flex items-center gap-2 bg-amber-900/40 px-4 py-2 rounded-lg border border-amber-800"><i class="fas fa-snowflake text-amber-400"></i> Fully Air-Conditioned</div>
@@ -54,107 +48,75 @@
         </div>
     </header>
 
-    <!-- Gallery Section (ဓါတ်ပုံများ ကဏ္ဍ) -->
+    <!-- Gallery Section -->
     <section class="container mx-auto px-4 py-16">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-amber-950 mb-2">ခန်းမအလှအပနှင့် ပြင်ဆင်မှုများ</h2>
             <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
-            <p class="text-gray-600 mt-4">စိတ်တိုင်းကျ ပြင်ဆင်နိုင်သော ခန်းမအပြင်အဆင် နမူနာများ</p>
         </div>
 
-        <!-- ၇ ပုံအတွက် အဆင့်မြင့် Masonry/Grid Layout -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            
-            <!-- Main Large Image -->
             <div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden shadow-lg group bg-amber-100">
                 <img src="images/kypballoon1.jpg" alt="KYP Balloon Hall 1" class="w-full h-full object-cover gallery-img min-h-[400px]">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
-                    <p class="text-white font-bold">Grand Stage & Lighting</p>
-                </div>
             </div>
-
-            <!-- Image 2 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon2.jpg" alt="KYP Balloon Hall 2" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">Elegant Seating Plan</p>
-                </div>
-            </div>
-
-            <!-- Image 3 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon3.jpg" alt="KYP Balloon Hall 3" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">Beautiful Backdrop Decorations</p>
-                </div>
-            </div>
-
-            <!-- Image 4 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon4.jpg" alt="KYP Balloon Hall 4" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">Special Event Setup</p>
-                </div>
-            </div>
-
-            <!-- Image 5 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon5.jpg" alt="KYP Balloon Hall 5" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">VIP Guest Area</p>
-                </div>
-            </div>
-
-            <!-- Image 6 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon6.jpg" alt="KYP Balloon Hall 6" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">Modern Audio & Video Control</p>
-                </div>
-            </div>
-
-            <!-- Image 7 -->
-            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64">
-                <img src="images/kypballoon7.jpg" alt="KYP Balloon Hall 7" class="w-full h-full object-cover gallery-img">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
-                    <p class="text-white text-sm font-bold">Reception Counter</p>
-                </div>
-            </div>
-
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon2.jpg" alt="KYP Balloon 2" class="w-full h-full object-cover gallery-img"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon3.jpg" alt="KYP Balloon 3" class="w-full h-full object-cover gallery-img"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon4.jpg" alt="KYP Balloon 4" class="w-full h-full object-cover gallery-img"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon5.jpg" alt="KYP Balloon 5" class="w-full h-full object-cover gallery-img"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon6.jpg" alt="KYP Balloon 6" class="w-full h-full object-cover gallery-img"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-md group bg-amber-100 h-64"><img src="images/kypballoon7.jpg" alt="KYP Balloon 7" class="w-full h-full object-cover gallery-img"></div>
         </div>
     </section>
 
-    <!-- Booking / Contact Section -->
-    <section id="booking" class="bg-amber-950 text-white py-16">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">အခမ်းအနားများအတွက် ရက်ချိန်းရယူရန်</h3>
-                    <p class="text-amber-200/80 mb-6 leading-relaxed">သင်၏ အဖိုးတန်ပြီး အမှတ်တရဖြစ်စေမည့် နေ့ရက်များကို စိတ်အေးချမ်းသာစွာ ကျင်းပနိုင်ရန်အတွက် လူကြီးမင်းတို့ စိတ်တိုင်းကျ ကြိုတင်ဘိုကင်ရယူ ဆွေးနွေးနိုင်ပါသည်။</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3 text-amber-200"><i class="fas fa-map-marker-alt text-amber-400"></i> တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်</div>
-                        <div class="flex items-center gap-3 text-amber-200"><i class="fas fa-phone-alt text-amber-400"></i> ၀၉-၆၉၈၃၅၇၂၇၂, ၀၉-၄၅၁၂၀၀၄၂၀</div>
-                        <div class="flex items-center gap-3 text-amber-200"><i class="fas fa-envelope text-amber-400"></i> info@khayaypinmart.com</div>
+    <!-- Location & Booking Section -->
+    <section id="booking-section" class="bg-amber-950 text-white py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                <!-- Contact Info Inside Hall Page -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-amber-400 mb-6">ခန်းမတည်နေရာနှင့် ဆက်သွယ်ရန်</h3>
+                        <div class="space-y-6 text-amber-100">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i>
+                                <p class="text-sm leading-relaxed">တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်။</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-phone-alt text-amber-400 mt-1"></i>
+                                <div class="flex flex-col text-sm">
+                                    <a href="tel:+959698357272" class="hover:underline">+95 9 698357272</a>
+                                    <a href="tel:+959451200420" class="hover:underline">+95 9 451200420</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://maps.app.goo.gl/i4Ktt66XZ4kkgH6m8" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold py-3 px-6 rounded-xl transition shadow-md w-full justify-center">
+                            <i class="fas fa-map-marked-alt"></i> Google Maps ဖြင့်ကြည့်ရန်
+                        </a>
                     </div>
                 </div>
-                <!-- Contact Form Box -->
-                <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl">
-                    <h4 class="text-xl font-bold text-amber-950 mb-4 text-center">စုံစမ်းမေးမြန်းရန်ပုံစံ</h4>
+
+                <!-- Booking Form -->
+                <div class="lg:col-span-7 bg-white text-gray-800 p-8 rounded-2xl shadow-2xl">
+                    <h4 class="text-xl font-bold text-amber-950 mb-4 text-center">ခန်းမကြိုတင်စုံစမ်းရန်ပုံစံ</h4>
                     <form class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">နာမည်</label>
-                            <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">ဖုန်းနံပါတ်</label>
-                            <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">နာမည်</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">ဖုန်းနံပါတ်</label>
+                                <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
+                            </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">ကျင်းပမည့်ရက်စွဲ</label>
-                            <input type="date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <input type="date" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
                         </div>
-                        <button type="button" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 rounded-lg transition shadow-md">
-                            အသေးစိတ် ဆက်သွယ်ရန် တောင်းဆိုမည်
+                        <button type="button" class="w-full bg-amber-800 hover:bg-amber-900 text-white font-bold py-3 rounded-lg transition shadow-md">
+                            အသေးစိတ်ဆက်သွယ်ရန် တောင်းဆိုမည်
                         </button>
                     </form>
                 </div>
@@ -163,7 +125,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-amber-990 text-amber-400/50 py-8 text-center border-t border-amber-900 bg-[#1c0d02]">
+    <footer class="bg-[#1c0d02] text-amber-700 py-8 text-center border-t border-amber-900">
         <p class="text-sm">&copy; 2026 Kha Yay Pin Balloon Hall. All Rights Reserved.</p>
     </footer>
 

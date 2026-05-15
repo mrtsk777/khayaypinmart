@@ -24,7 +24,6 @@
                 <a href="index.html" class="hover:text-green-200">ပင်မစာမျက်နှာ</a>
                 <a href="products.html" class="text-yellow-300 font-bold">ကုန်ပစ္စည်းများ</a>
                 <a href="balloon.html" class="hover:text-green-200">Balloon ခန်းမ</a>
-                <a href="#" class="hover:text-green-200">ဆက်သွယ်ရန်</a>
             </div>
             <div class="flex items-center gap-4">
                 <i class="fas fa-search cursor-pointer"></i>
@@ -39,15 +38,13 @@
     <!-- Page Title -->
     <header class="bg-white border-b py-8">
         <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">ကျွန်ုပ်တို့၏ ရောင်းကုန်ပစ္စည်းများ</h1>
+            <h1 class="text-3xl font-bold text-gray-800 text-center">ကျွန်ုပ်တို့၏ ရောင်းကုန်ပစ္စည်းများ</h1>
         </div>
     </header>
 
-    <!-- Product Grid -->
+    <!-- Product Grid Section -->
     <main class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            
-            <!-- JavaScript အသုံးပြု၍ ပစ္စည်း ၁၇ မျိုးသာ ထည့်သွင်းထားသည် (Balloon များ မပါဝင်ပါ) -->
             <script>
                 const products = [
                     { name: "ဘောလုံး", img: "ball", price: "15,000", cat: "Sports" },
@@ -70,7 +67,6 @@
                 ];
 
                 const container = document.querySelector('.grid');
-
                 products.forEach(p => {
                     container.innerHTML += `
                         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
@@ -92,13 +88,54 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold text-white mb-4">Kha Yay Pin Mart</h2>
-            <hr class="my-6 border-gray-700">
-            <p class="text-sm">&copy; 2026 Kha Yay Pin Mart. All Rights Reserved.</p>
+    <!-- Contact & Location Section -->
+    <section class="bg-slate-100 py-16 border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12">
+                <span class="text-green-600 font-bold uppercase tracking-wider text-sm">Location & Contact</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-2">ဆက်သွယ်ရန်နှင့် တည်နေရာ</h2>
+                <div class="w-16 h-1 bg-green-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Info -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-green-600 to-emerald-700 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">ခရေပင်ကုန်တိုက် (Kha Yay Pin Mart)</h3>
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-white/10 p-3 rounded-xl border border-white/20"><i class="fas fa-map-marked-alt text-xl text-yellow-300"></i></div>
+                            <div>
+                                <h4 class="font-bold text-yellow-300 mb-1">ဆိုင်တည်နေရာလိပ်စာ</h4>
+                                <p class="text-sm text-green-50 leading-relaxed">တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်။</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-white/10 p-3 rounded-xl border border-white/20"><i class="fas fa-phone-alt text-xl text-yellow-300"></i></div>
+                            <div>
+                                <h4 class="font-bold text-yellow-300 mb-1">ဆက်သွယ်ရန်ဖုန်းများ</h4>
+                                <div class="flex flex-col gap-1 text-sm text-green-50">
+                                    <a href="tel:+959698357272" class="hover:underline">+95 9 698357272</a>
+                                    <a href="tel:+959451200420" class="hover:underline">+95 9 451200420</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <a href="https://maps.app.goo.gl/i4Ktt66XZ4kkgH6m8" target="_blank" class="w-full bg-white text-green-700 font-bold py-3 px-6 rounded-xl shadow-md hover:bg-yellow-300 hover:text-gray-900 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-directions"></i> Google Maps ဖြင့် လမ်းညွှန်ရယူရန်
+                        </a>
+                    </div>
+                </div>
+                <!-- Map -->
+                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xl overflow-hidden min-h-[400px] relative">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.3243954573887!2d96.1264875!3d16.9589333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c197874fc75f73%3A0xed188a29fac8d8b8!2sKhaYaePin%20Mart!5e0!3m2!1smy!2smm!4v1715000000000!5m2!1smy!2smm" class="w-full h-full border-0 absolute inset-0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <p class="text-sm">&copy; 2026 Kha Yay Pin Mart. All Rights Reserved.</p>
     </footer>
 
 </body>
