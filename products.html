@@ -3,139 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Kha Yay Pin Mart</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Our Products - Kha Yay Pin Mart</title>
+    
+    <!-- လူကြီးမင်းတို့ရဲ့ style.css ကို ပြန်လည်ချိတ်ဆက်ခြင်း -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon များအတွက် Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&display=swap');
-        body { font-family: 'Pyidaungsu', sans-serif; background-color: #f8fafc; }
-        .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-    </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <nav class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold flex items-center gap-2">
-                <i class="fas fa-leaf"></i> Kha Yay Pin Mart
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-green-200">ပင်မစာမျက်နှာ</a>
-                <a href="products.html" class="text-yellow-300 font-bold">ကုန်ပစ္စည်းများ</a>
-                <a href="balloon.html" class="hover:text-green-200">Balloon ခန်းမ</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <i class="fas fa-search cursor-pointer"></i>
-                <div class="relative">
-                    <i class="fas fa-shopping-cart cursor-pointer"></i>
-                    <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full px-1">0</span>
-                </div>
-            </div>
+    <!-- ၁။ နဖူးစည်း Header Menu -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <i class="fas fa-shopping-bag"></i> Kha Yay Pin <span>Mart</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">ပင်မစာမျက်နှာ</a>
+            <a href="products.html" class="nav-item active">ကုန်ပစ္စည်းများ</a>
+            <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
+            <a href="balloon.html" class="nav-item">Balloon ခန်းမ</a>
         </div>
     </nav>
 
-    <!-- Page Title -->
-    <header class="bg-white border-b py-8">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold text-gray-800 text-center">ကျွန်ုပ်တို့၏ ရောင်းကုန်ပစ္စည်းများ</h1>
+    <!-- Main Content Container -->
+    <main class="main-container">
+
+        <!-- စာမျက်နှာ ခေါင်းစဉ် (Page Title) -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 32px; font-weight: 700; color: #0f172a;">ကျွန်ုပ်တို့၏ ကုန်ပစ္စည်းများ</h1>
+            <p style="color: #64748b; font-size: 14px; margin-top: 8px;">လတ်ဆတ်သန့်ရှင်းပြီး စိတ်ချရသော လူသုံးကုန်၊ စားသောက်ကုန်များကို စျေးနှုန်းချိုသာစွာ ဝယ်ယူရရှိနိုင်ပါသည်။</p>
         </div>
-    </header>
 
-    <!-- Product Grid Section -->
-    <main class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <script>
-                const products = [
-                    { name: "ဘောလုံး", img: "ball", price: "15,000", cat: "Sports" },
-                    { name: "Coffee Premium", img: "coffee1", price: "5,500", cat: "Drink" },
-                    { name: "Coffee Mix", img: "coffee2", price: "4,800", cat: "Drink" },
-                    { name: "အအေးမျိုးစုံ", img: "drinks", price: "1,200", cat: "Drink" },
-                    { name: "Fast Food Set", img: "fast_foods", price: "8,500", cat: "Food" },
-                    { name: "နွားနို့", img: "milk", price: "3,500", cat: "Drink" },
-                    { name: "ရုံးသုံးပစ္စည်း", img: "office", price: "2,000", cat: "Office" },
-                    { name: "ရှပ်အင်္ကျီ", img: "shirt", price: "12,000", cat: "Fashion" },
-                    { name: "ဖိနပ် (Shoe)", img: "shoe", price: "25,000", cat: "Fashion" },
-                    { name: "အိမ်စီးဖိနပ်", img: "sliper", price: "3,500", cat: "Fashion" },
-                    { name: "တာယာ", img: "tayar", price: "45,000", cat: "Car" },
-                    { name: "လက်ဖက်ရည်", img: "tea", price: "2,500", cat: "Drink" },
-                    { name: "သွားတိုက်တံ နှင့် ဆေး", img: "toothpaste_brush", price: "1,500", cat: "Health" },
-                    { name: "လျှပ်စစ်ကြိုး Type 1", img: "wires1", price: "5,000", cat: "Electronics" },
-                    { name: "လျှပ်စစ်ကြိုး Type 2", img: "wires2", price: "6,000", cat: "Electronics" },
-                    { name: "လျှပ်စစ်ကြိုး Type 3", img: "wires3", price: "7,000", cat: "Electronics" },
-                    { name: "လျှပ်စစ်ကြိုး Type 4", img: "wires4", price: "8,000", cat: "Electronics" }
-                ];
+        <!-- ၂။ ကုန်ပစ္စည်းများ စနစ်တကျ ပြသသည့် Grid စနစ် -->
+        <!-- (style.css ထဲက grid-3 နဲ့ premium-card ကို သုံးထားလို့ ပုံတွေ အရမ်းကြီးမလာတော့ပါ) -->
+        <div class="grid-3">
+            
+            <!-- ကုန်ပစ္စည်း ၁ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="အသင့်စား အစားအစာများ"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">အသင့်စား Fast Food မျိုးစုံ</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">သန့်ရှင်းလတ်ဆတ်ပြီး အရသာရှိသော အစားအစာများ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
 
-                const container = document.querySelector('.grid');
-                products.forEach(p => {
-                    container.innerHTML += `
-                        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
-                            <div class="relative h-64 bg-gray-200 overflow-hidden">
-                                <img src="images/${p.img}.jpg" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                                <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-md">${p.cat}</span>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-800 mb-2">${p.name}</h3>
-                                <p class="text-green-600 font-bold mb-4">${p.price} MMK</p>
-                                <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-green-600 transition flex items-center justify-center gap-2">
-                                    <i class="fas fa-cart-plus"></i> ခြင်းထဲထည့်မည်
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                });
-            </script>
+            <!-- ကုန်ပစ္စည်း ၂ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="အလှကုန်ပစ္စည်း"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">အလှကုန်ပစ္စည်း</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">နိုင်ငံတကာအဆင့်မီ Skin Care များ</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">စစ်မှန်သော Quality စိတ်ချရသည့် အလှကုန်များ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ကုန်ပစ္စည်း ၃ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="လူသုံးကုန်"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လူသုံးကုန်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">အိမ်သုံးသန့်ရှင်းရေးပစ္စည်းများ</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အိမ်တိုင်းအတွက် မရှိမဖြစ် အရည်အသွေးမြင့် လူသုံးကုန်များ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ကုန်ပစ္စည်း ၄ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="အချိုရည်နှင့် မုန့်"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">အချိုရည်နှင့် မုန့်</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">လတ်ဆတ်သော သစ်သီးဖျော်ရည်များ</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ကျန်းမာရေးနှင့်ညီညွတ်သော ကလေး၊ လူကြီးကြိုက် အချိုရည်များ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ကုန်ပစ္စည်း ၅ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="ကလေးသုံးပစ္စည်း"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">ကလေးသုံးပစ္စည်း</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">Baby Diapers & Essentials</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ရင်သွေးငယ်များအတွက် နူးညံ့စိတ်ချရသော ပစ္စည်းမျိုးစုံ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ကုန်ပစ္စည်း ၆ -->
+            <div class="premium-card">
+                <div class="card-img-box"><img src="images/fast_foods.jpg" alt="မီးဖိုချောင်သုံး"></div>
+                <div style="padding: 20px;">
+                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">မီးဖိုချောင်သုံး</span>
+                    <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0; color: #1e293b;">ဟင်းချက်ဆီနှင့် အခြေခံစားသောက်ကုန်</h4>
+                    <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အရည်အသွေးမြင့် ဆန်၊ ဆီ၊ ဆား နှင့် ဟင်းခတ်ပစ္စည်းများ။</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #16a34a; font-weight: 700; font-size: 15px;">သင့်တင့်သောဈေးနှုန်း</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <!-- Contact & Location Section -->
-    <section class="bg-slate-100 py-16 border-t border-gray-200">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="text-center mb-12">
-                <span class="text-green-600 font-bold uppercase tracking-wider text-sm">Location & Contact</span>
-                <h2 class="text-3xl font-bold text-gray-800 mt-2">ဆက်သွယ်ရန်နှင့် တည်နေရာ</h2>
-                <div class="w-16 h-1 bg-green-600 mx-auto mt-4 rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Info -->
-                <div class="lg:col-span-5 bg-gradient-to-br from-green-600 to-emerald-700 text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-6">ခရေပင်ကုန်တိုက် (Kha Yay Pin Mart)</h3>
-                        <div class="flex items-start gap-4 mb-6">
-                            <div class="bg-white/10 p-3 rounded-xl border border-white/20"><i class="fas fa-map-marked-alt text-xl text-yellow-300"></i></div>
-                            <div>
-                                <h4 class="font-bold text-yellow-300 mb-1">ဆိုင်တည်နေရာလိပ်စာ</h4>
-                                <p class="text-sm text-green-50 leading-relaxed">တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်။</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 mb-6">
-                            <div class="bg-white/10 p-3 rounded-xl border border-white/20"><i class="fas fa-phone-alt text-xl text-yellow-300"></i></div>
-                            <div>
-                                <h4 class="font-bold text-yellow-300 mb-1">ဆက်သွယ်ရန်ဖုန်းများ</h4>
-                                <div class="flex flex-col gap-1 text-sm text-green-50">
-                                    <a href="tel:+959698357272" class="hover:underline">+95 9 698357272</a>
-                                    <a href="tel:+959451200420" class="hover:underline">+95 9 451200420</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8 pt-6 border-t border-white/10">
-                        <a href="https://maps.app.goo.gl/i4Ktt66XZ4kkgH6m8" target="_blank" class="w-full bg-white text-green-700 font-bold py-3 px-6 rounded-xl shadow-md hover:bg-yellow-300 hover:text-gray-900 transition flex items-center justify-center gap-2">
-                            <i class="fas fa-directions"></i> Google Maps ဖြင့် လမ်းညွှန်ရယူရန်
-                        </a>
-                    </div>
-                </div>
-                <!-- Map -->
-                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xl overflow-hidden min-h-[400px] relative">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.3243954573887!2d96.1264875!3d16.9589333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c197874fc75f73%3A0xed188a29fac8d8b8!2sKhaYaePin%20Mart!5e0!3m2!1smy!2smm!4v1715000000000!5m2!1smy!2smm" class="w-full h-full border-0 absolute inset-0" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-        <p class="text-sm">&copy; 2026 Kha Yay Pin Mart. All Rights Reserved.</p>
+    <!-- ၃။ Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Kha Yay Pin Mart. All Rights Reserved.</p>
     </footer>
 
 </body>
