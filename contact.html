@@ -1,123 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | KHA YAY PIN MART</title>
+    <title>Contact Us - Kha Yae Pin Mart</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- မျက်စိပသာဒဖြစ်စေမည့် အဆင့်မြင့် Menu block တုံး စတိုင်လ်များ -->
     <style>
-        .contact-container { max-width: 1100px; margin: 150px auto 100px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        .contact-info-box h2 { font-size: 2.5rem; margin: 0 0 20px; }
-        .contact-info-box p { color: var(--gray-color); line-height: 1.6; font-size: 1.1rem; }
-        .info-details { margin-top: 40px; }
-        .info-item { margin-bottom: 25px; font-size: 1.05rem; }
-        .info-item strong { color: var(--primary-color); display: block; margin-bottom: 5px; }
-        
-        /* Form Styling */
-        .contact-form { background: var(--light-bg); padding: 40px; border-radius: 24px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #e8e8ed; border-radius: 10px; font-family: inherit; font-size: 1rem; box-sizing: border-box; }
-        .submit-btn { width: 100%; background: var(--primary-color); color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: 0.3s; }
-        .submit-btn:hover { background: #c0392b; }
-        
-        .map-section { max-width: 1100px; margin: 0 auto 100px; padding: 0 20px; }
-        .map-section iframe { width: 100%; height: 450px; border: none; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        
-        @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; gap: 40px; } }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            text-decoration: none;
+        }
+        .nav-brand span { 
+            color: #d97706; /* ရွှေဝါရောင် */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 8px; /* ထောင့်ဝိုင်း Block တုံး */
+            transition: all 0.3s ease;
+            background: #f8fafc; /* မရွေးထားရင် အောက်ခံကာလာနုနု */
+            border: 1px solid #e2e8f0;
+            display: inline-block;
+        }
+
+        /* မရွေးထားတဲ့ Menu တွေကို Mouse တင်ရင် ပြောင်းမည့်ပုံစံ */
+        .nav-item:hover {
+            color: #ffffff;
+            background: #f59e0b;
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        /* ⭐️ ရွေးချယ်ထားတဲ့ ဆက်သွယ်ရန် Menu ကိုပဲ ကာလာ Highlight ထင်ထင်ရှားရှား ပြထားခြင်း */
+        .nav-item.active {
+            color: #ffffff;
+            background: #d97706; /* ရွှေအိုရောင်ရင့် */
+            border-color: #d97706;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #0f172a;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                gap: 10px;
+                box-sizing: border-box;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                padding: 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ၁။ နဖူးစည်း Header Menu (အသစ်) -->
+    <!-- ၁။ နဖူးစည်း Header Menu -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
+            <i class="fas fa-shopping-bag" style="color: #d97706;"></i> Kha Yae Pin <span>Mart</span>
         </a>
         
-        <!-- ဖုန်းမှာ ပေါ်မယ့် ၃ ကြောင်း အတုံးလေး -->
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
 
+        <!-- ဆက်သွယ်ရန် (Contact) စာမျက်နှာ ဖြစ်၍ ၎င်းနေရာတွင်သာ active ပြထားပါသည် -->
         <div class="nav-links" id="nav-menu">
-            <a href="index.html" class="nav-item active">ပင်မစာမျက်နှာ</a>
+            <a href="index.html" class="nav-item">ပင်မစာမျက်နှာ</a>
             <a href="products.html" class="nav-item">ကုန်ပစ္စည်းများ</a>
             <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
             <a href="balloon.html" class="nav-item">Balloon ခန်းမ</a>
+            <a href="contact.html" class="nav-item active">ဆက်သွယ်ရန်</a>
         </div>
     </nav>
 
-    <main class="contact-container">
-        <!-- ဘယ်ဘက်ခြမ်း- ဆက်သွယ်ရန် အချက်အလက်များ -->
-        <div class="contact-info-box">
-            <h2>Get in Touch.</h2>
-            <p>ကျွန်ုပ်တို့ KHA YAY PIN MART သို့ လူကိုယ်တိုင် လာရောက်ဝယ်ယူလိုသူများ သို့မဟုတ် လက်လီလက်ကား မှာယူလိုသူများ အောက်ပါအချက်အလက်များအတိုင်း ဆက်သွယ်နိုင်ပါသည်။</p>
-            
-            <div class="info-details">
-                <div class="info-item">
-                    <strong>📍 ဆိုင်တည်နေရာလိပ်စာ</strong>
-                    တပ်မတော်ဆေးတက္ကသိုလ်ရှေ့၊ ရန်ကုန်-ပြည်လမ်းမကြီးကပ်လျက်၊ ခရေပင်လမ်းဆုံအနီး၊ ခရေပင်ကုန်တိုက် တတိယအထပ်
-                </div>
-                <div class="info-item">
-                    <strong>📞 ဖုန်းနံပါတ်</strong>
-                    +95 9 698357272, +95 9 451200420
-                </div>
-                <div class="info-item">
-                    <strong>✉️ အီးမေးလ်လိပ်စာ</strong>
-                    mr.thetsoekhaing@gmail.com
-                </div>
-            </div>
-        </div>
+    <!-- လူကြီးမင်း၏ မူလ Contact Page အတွင်းပိုင်းအလှအပများ ဆက်လက်တည်ရှိမည့်နေရာ -->
+    <main class="main-container">
+        
+        <!-- (လူကြီးမင်း ရေးသားထားဖူးသော လိပ်စာ၊ ဖုန်းနံပါတ်၊ မြေပုံ နှင့် Form စာသားများ ဤနေရာတွင် ပုံမှန်အတိုင်း ပေါ်နေပါလိမ့်မည်) -->
 
-        <!-- ညာဘက်ခြမ်း- ဝယ်သူများ စာပို့နိုင်မည့် Form -->
-        <form class="contact-form" onsubmit="alert('Message sent successfully!'); return false;">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" placeholder="သင့်အမည်" required>
-            </div>
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="သင့်ဖုန်းနံပါတ်" required>
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea rows="5" placeholder="မေးမြန်းလိုသည့်အကြောင်းအရာ" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
     </main>
 
-    <!-- Google Maps (မြေပုံထည့်ရန်နေရာ) -->
-    <section class="map-section">
-        <h2 class="section-title" style="border-left-color: var(--dark-color);">Our Location</h2>
-        <!-- ရန်ကုန်မြို့လယ် နမူနာမြေပုံ ထည့်ပေးထားပါတယ်၊ နောက်မှ မိမိဆိုင်မြေပုံလင့်ခ်နှင့် လဲနိုင်ပါသည် -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1p18!1m12!1m3!1d3819.1760434440026!2d96.1542618!3d16.7928421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec1600000001%3A0x6b772c91a329dfda!2sYangon!5e0!3m2!1sen!2smm!4v1715600000000"></iframe>
-    </section>
-
-    <footer>
-        <p>© 2026 KHA YAY PIN MART. All rights reserved.</p>
+    <!-- ၅။ Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Kha Yae Pin Mart. All Rights Reserved.</p>
     </footer>
-    <!-- ဖုန်း Menu ပွင့်/ပိတ် လုပ်ပေးမည့် Script လေး ဖြစ်ပါတယ် -->
+
+    <!-- ဖုန်း Menu စနစ် Javascript -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
-            
-            // Icon လေးကို ၃ ကြောင်းပုံကနေ မြှားပုံ (သို့) ကြက်ခြေခတ်ပုံ ပြောင်းချင်ရင်လဲ ရပါတယ်
             const icon = mobileMenu.querySelector('i');
             if (navMenu.classList.contains('show')) {
                 icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times'); // ကြက်ခြေခတ်ပြောင်းမယ်
+                icon.classList.add('fa-times');
             } else {
                 icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars'); // ၃ ကြောင်းပုံပြန်ပြမယ်
+                icon.classList.add('fa-bars');
             }
         });
     </script>
-    
+
 </body>
 </html>
