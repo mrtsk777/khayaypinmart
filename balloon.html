@@ -14,22 +14,22 @@
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <nav class="bg-amber-900 text-amber-100 shadow-xl sticky top-0 z-50 border-b border-amber-800">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-wider flex items-center gap-2 text-amber-400">
-                <i class="fas fa-crown"></i> KYP BALLOON HALL
-            </a>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="index.html" class="hover:text-amber-400 transition">ပင်မစာမျက်နှာ</a>
-                <a href="products.html" class="hover:text-amber-400 transition">ကုန်ပစ္စည်းများ</a>
-                <a href="balloon.html" class="text-white border-b-2 border-amber-400 pb-1">Balloon ခန်းမ</a>
-            </div>
-            <div>
-                <a href="#booking-section" class="bg-amber-500 hover:bg-amber-600 text-amber-950 px-5 py-2 rounded-full font-bold shadow-md transition text-sm">
-                    ဘိုကင်တင်ရန်
-                </a>
-            </div>
+    <!-- ၁။ နဖူးစည်း Header Menu (အသစ်) -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
+        </a>
+        
+        <!-- ဖုန်းမှာ ပေါ်မယ့် ၃ ကြောင်း အတုံးလေး -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html" class="nav-item active">ပင်မစာမျက်နှာ</a>
+            <a href="products.html" class="nav-item">ကုန်ပစ္စည်းများ</a>
+            <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
+            <a href="balloon.html" class="nav-item">Balloon ခန်းမ</a>
         </div>
     </nav>
 
@@ -128,6 +128,25 @@
     <footer class="bg-[#1c0d02] text-amber-700 py-8 text-center border-t border-amber-900">
         <p class="text-sm">&copy; 2026 Kha Yae Pin Balloon Hall. All Rights Reserved.</p>
     </footer>
+    <!-- ဖုန်း Menu ပွင့်/ပိတ် လုပ်ပေးမည့် Script လေး ဖြစ်ပါတယ် -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
 
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            
+            // Icon လေးကို ၃ ကြောင်းပုံကနေ မြှားပုံ (သို့) ကြက်ခြေခတ်ပုံ ပြောင်းချင်ရင်လဲ ရပါတယ်
+            const icon = mobileMenu.querySelector('i');
+            if (navMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // ကြက်ခြေခတ်ပြောင်းမယ်
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // ၃ ကြောင်းပုံပြန်ပြမယ်
+            }
+        });
+    </script>
+    
 </body>
 </html>

@@ -30,13 +30,22 @@
 </head>
 <body>
 
-    <!-- Navigation Menu Bar -->
-    <nav>
-        <div class="logo">KHA YAY PIN MART</div>
-        <div class="menu-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html" class="active">Contact</a>
+    <!-- ၁။ နဖူးစည်း Header Menu (အသစ်) -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
+        </a>
+        
+        <!-- ဖုန်းမှာ ပေါ်မယ့် ၃ ကြောင်း အတုံးလေး -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html" class="nav-item active">ပင်မစာမျက်နှာ</a>
+            <a href="products.html" class="nav-item">ကုန်ပစ္စည်းများ</a>
+            <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
+            <a href="balloon.html" class="nav-item">Balloon ခန်းမ</a>
         </div>
     </nav>
 
@@ -90,6 +99,25 @@
     <footer>
         <p>© 2026 KHA YAY PIN MART. All rights reserved.</p>
     </footer>
+    <!-- ဖုန်း Menu ပွင့်/ပိတ် လုပ်ပေးမည့် Script လေး ဖြစ်ပါတယ် -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
 
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            
+            // Icon လေးကို ၃ ကြောင်းပုံကနေ မြှားပုံ (သို့) ကြက်ခြေခတ်ပုံ ပြောင်းချင်ရင်လဲ ရပါတယ်
+            const icon = mobileMenu.querySelector('i');
+            if (navMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // ကြက်ခြေခတ်ပြောင်းမယ်
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // ၃ ကြောင်းပုံပြန်ပြမယ်
+            }
+        });
+    </script>
+    
 </body>
 </html>
