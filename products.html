@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Kha Yae Pin Mart</title>
     
+    <!-- စုစည်းပြီးသား style.css ဖြင့် တိုက်ရိုက်ချိတ်ဆက်ခြင်း -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- ၁။ နဖူးစည်း Header Menu (အသစ်) -->
+    <!-- ၁။ နဖူးစည်း Header Menu -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
             <i class="fas fa-shopping-bag"></i> Kha Yae Pin <span>Mart</span>
         </a>
         
-        <!-- ဖုန်းမှာ ပေါ်မယ့် ၃ ကြောင်း အတုံးလေး -->
+        <!-- ဖုန်းမျက်နှာပြင်အတွက် ၃ ကြောင်း Menu Toggle -->
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
 
-            <div class="nav-links" id="nav-menu">
+        <!-- ကုန်ပစ္စည်းများ စာမျက်နှာဖြစ်၍ active ပေးထားပါသည် -->
+        <div class="nav-links" id="nav-menu">
             <a href="index.html" class="nav-item">ပင်မစာမျက်နှာ</a>
             <a href="products.html" class="nav-item active">ကုန်ပစ္စည်းများ</a>
             <a href="services.html" class="nav-item">ဝန်ဆောင်မှုများ</a>
@@ -30,175 +33,196 @@
         </div>
     </nav>
 
+    <!-- Main Content Container -->
     <main class="main-container">
 
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 32px; font-weight: 700; color: #0f172a;">ကျွန်ုပ်တို့၏ ကုန်ပစ္စည်းများ</h1>
-            <p style="color: #64748b; font-size: 14px; margin-top: 8px;">အရည်အသွေးမြင့် ကုန်ပစ္စည်းစုံလင်စွာကို စျေးနှုန်းချိုသာစွာဖြင့် တစ်နေရာတည်းမှာ ဝယ်ယူရရှိနိုင်ပါသည်။</p>
+        <!-- ခေါင်းစဉ်ပိုင်း (ကျက်သရေရှိလှပသော ပုံစံ) -->
+        <div style="text-align: center; margin-bottom: 50px; margin-top: 20px;">
+            <h1 style="font-size: 32px; font-weight: 700; color: #1e293b; letter-spacing: 0.5px;">ကျွန်ုပ်တို့၏ ကုန်ပစ္စည်းများ</h1>
+            <div style="width: 60px; height: 3px; background: #d97706; margin: 12px auto;"></div>
+            <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto; line-height: 1.6;">အရည်အသွေးမြင့် ကုန်ပစ္စည်းစုံလင်စွာကို စျေးနှုန်းချိုသာစွာဖြင့် တစ်နေရာတည်းမှာ စိတ်ချမ်းမြေ့စွာ ဝယ်ယူရရှိနိုင်ပါသည်။</p>
         </div>
 
+        <!-- ကုန်ပစ္စည်းများ ပြသမည့် Grid စနစ် -->
         <div class="grid-3">
             
+            <!-- Product 1 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/fast_foods.jpg" alt="Fast Foods"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အသင့်စား Fast Food မျိုးစုံ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">သန့်ရှင်းလတ်ဆတ်ပြီး အရသာရှိသော အစားအစာများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 2 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/coffee1.jpg" alt="Coffee 1"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Premium Coffee Mix (အထုပ်ကြီး)</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">မွှေးကြိုင်နက်ရှိုင်းသော ကော်ဖီစစ်စစ် အရသာ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 3 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/coffee2.jpg" alt="Coffee 2"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Roasted Coffee Beans</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အဆင့်မြင့် ကော်ဖီစေ့လှော်နှင့် အမှုန့်များ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 4 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/drinks.jpg" alt="Drinks"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">လတ်ဆတ်သော အချိုရည်မျိုးစုံ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ရင်အေးစေမည့် သစ်သီးဖျော်ရည်နှင့် Soft Drinks များ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 5 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/milk.jpg" alt="Milk"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အာဟာရပြည့် နွားနို့စစ်စစ်</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ကျန်းမာရေးနှင့် ညီညွတ်သော Fresh Milk နှင့် နို့မှုန့်များ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 6 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/tea.jpg" alt="Tea"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">စားသောက်ကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Traditional Tea Mix</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">မြန်မာ့ရိုးရာ လက်ဖက်ရည်ချိုချိုစိမ့်စိမ့် အရသာ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 7 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/shirt.jpg" alt="Shirt"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">အဝတ်အထည်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">အဝတ်အထည်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">ခေတ်မီ စတိုင်လ်ရှပ်အင်္ကျီများ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ကျနသပ်ရပ်ပြီး ဝတ်ဆင်ရ သက်တောင့်သက်သာရှိသော Casual Shirts။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 8 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/shoe.jpg" alt="Shoe"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Premium Sneakers / ရှူးဖိနပ်များ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ခိုင်ခံ့လှပပြီး အားကစားနှင့် လမ်းလျှောက်ရန် သင့်တော်သော ဖိနပ်များ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 9 -->
             <div class="premium-card">
-                <div class="card-img-box"><img src="images/sliper.jpg" alt="Sliper"></div>
+                <div class="card-img-box"><img src="images/sliper.jpg" alt="Slipper"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">ဖိနပ်မျိုးစုံ</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အိမ်သုံး သက်တောင့်သက်သာ ညှပ်ဖိနပ်များ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ပေါ့ပါးပြီး ရေစိုခံ၊ ကြာရှည်ခံမည့် နေ့စဉ်စီး ညှပ်ဖိနပ်များ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 10 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/toothpaste_brush.jpg" alt="Toothpaste Brush"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လူသုံးကုန်</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လူသုံးကုန်</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">သွားတိုက်ဆေးနှင့် သွားတိုက်တံစုံ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">ခံတွင်းသန့်ရှင်းရေးအတွက် ခိုင်ခံ့စိတ်ချရသော ကိုယ်ရေးသုံးပစ္စည်းများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 11 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/ball.jpg" alt="Ball"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">အားကစားပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">အားကစားပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">စံချိန်မီ ဘောလုံးနှင့် အားကစားပစ္စည်းများ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အရည်အသွေးမြင့် ကစားကွင်းသုံး ဘောလုံးများနှင့် အပိုပစ္စည်းများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 12 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/tayar.jpg" alt="Tayar"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">မော်တော်ယာဉ်အပိုပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">မော်တော်ယာဉ်အပိုပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">အဆင့်မြင့် မော်တော်ယာဉ် တာယာများ</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">လမ်းပေါ်တွင် ဘေးအန္တရာယ်ကင်းရှင်းစေမည့် ခိုင်ခံ့သောတာယာများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 13 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/wires1.jpg" alt="Wires 1"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Copper Electrical Wires (Type 1)</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အိမ်တွင်း လျှပ်စစ်သွယ်တန်းရန် စံချိန်မီ ကြေးနန်းကြိုးများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 14 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/wires2.jpg" alt="Wires 2"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Heavy Duty Power Cables (Type 2)</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">မီတာနှင့် Main Box များအတွက် ခံနိုင်ရည်မြင့် ဝါယာကြိုးများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 15 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/wires3.jpg" alt="Wires 3"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Flexible Multi-Core Wires (Type 3)</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">အီလက်ထရွန်နစ်ပစ္စည်းများနှင့် ပလပ်ခေါင်းသုံး ဝါယာကြိုးများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 16 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/wires4.jpg" alt="Wires 4"></div>
                 <div style="padding: 20px;">
-                    <span style="color: #16a34a; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
+                    <span style="color: #d97706; font-size: 11px; font-weight: 700; text-transform: uppercase;">လျှပ်စစ်ပစ္စည်း</span>
                     <h4 style="font-size: 16px; font-weight: 700; margin: 5px 0 8px 0;">Insulated Industrial Wires (Type 4)</h4>
                     <p style="color: #64748b; font-size: 13px; margin-bottom: 15px;">စက်မှုလုပ်ငန်းသုံးနှင့် ကွန်ရက်ချိတ်ဆက်မှုသုံး ဝါယာကြိုးများ။</p>
-                    <div style="color: #16a34a; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
+                    <div style="color: #b45309; font-weight: 700; font-size: 14px;">သင့်တင့်သောဈေးနှုန်း</div>
                 </div>
             </div>
 
+            <!-- Product 17 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon1.jpg" alt="Balloon 1"></div>
                 <div style="padding: 20px;">
@@ -209,6 +233,7 @@
                 </div>
             </div>
 
+            <!-- Product 18 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon2.jpg" alt="Balloon 2"></div>
                 <div style="padding: 20px;">
@@ -219,6 +244,7 @@
                 </div>
             </div>
 
+            <!-- Product 19 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon3.jpg" alt="Balloon 3"></div>
                 <div style="padding: 20px;">
@@ -229,6 +255,7 @@
                 </div>
             </div>
 
+            <!-- Product 20 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon4.jpg" alt="Balloon 4"></div>
                 <div style="padding: 20px;">
@@ -239,6 +266,7 @@
                 </div>
             </div>
 
+            <!-- Product 21 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon5.jpg" alt="Balloon 5"></div>
                 <div style="padding: 20px;">
@@ -249,6 +277,7 @@
                 </div>
             </div>
 
+            <!-- Product 22 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon6.jpg" alt="Balloon 6"></div>
                 <div style="padding: 20px;">
@@ -259,6 +288,7 @@
                 </div>
             </div>
 
+            <!-- Product 23 -->
             <div class="premium-card">
                 <div class="card-img-box"><img src="images/kypballoon7.jpg" alt="Balloon 7"></div>
                 <div style="padding: 20px;">
@@ -272,25 +302,25 @@
         </div>
     </main>
 
+    <!-- အောက်ခြေ Footer -->
     <footer class="footer">
         <p>&copy; 2026 Kha Yae Pin Mart. All Rights Reserved.</p>
     </footer>
-    <!-- ဖုန်း Menu ပွင့်/ပိတ် လုပ်ပေးမည့် Script လေး ဖြစ်ပါတယ် -->
+
+    <!-- ဖုန်း Menu စနစ် ဖွင့်/ပိတ် JavaScript -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('show');
-            
-            // Icon လေးကို ၃ ကြောင်းပုံကနေ မြှားပုံ (သို့) ကြက်ခြေခတ်ပုံ ပြောင်းချင်ရင်လဲ ရပါတယ်
             const icon = mobileMenu.querySelector('i');
             if (navMenu.classList.contains('show')) {
                 icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times'); // ကြက်ခြေခတ်ပြောင်းမယ်
+                icon.classList.add('fa-times');
             } else {
                 icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars'); // ၃ ကြောင်းပုံပြန်ပြမယ်
+                icon.classList.add('fa-bars');
             }
         });
     </script>
