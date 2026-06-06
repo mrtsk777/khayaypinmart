@@ -74,19 +74,36 @@ body {
     box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
 }
 
-/* ဖုန်းမှာပေါ်မည့် Menu Icon */
+/* ဖုန်းမှာပေါ်မည့် Menu Icon (Default ပိတ်ထားမည်) */
 .menu-toggle {
     display: none;
     font-size: 24px;
     color: #1e293b;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #f1f5f9; /* Android မှာ နှိပ်ရမှန်းသိသာအောင် ခလုတ်နောက်ခံထည့်ပေးထားသည် */
 }
 
-/* --- 📱 Mobile Responsive (စမတ်ဖုန်းများအတွက်) --- */
+/* --- 📱 Mobile Responsive (စမတ်ဖုန်းများအတွက် Android ကော iPhone ပါ စိတ်ချရစေရန်) --- */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: inline-flex !important; /* Block အစား inline-flex ဖြင့် သေချာပေါက် ဖော်ပြခိုင်းခြင်း */
+        align-items: center;
+        justify-content: center;
+        position: relative !important; 
+        z-index: 2000 !important;      /* Layer အဆင့်ကို အမြင့်ဆုံးသို့ တင်ထားသည် */
+        min-width: 44px;
+        min-height: 44px;              /* ဖုန်းမှာ နှိပ်ရလွယ်ကူစေမည့် Standard အရွယ်အစား */
+    }
+
+    /* 💡 အကယ်၍ Android ဘရောင်ဇာက Icon ကို မပြနိုင်ခဲ့လျှင် စာသားထွက်လာစေရန် Backup စနစ် */
+    .menu-toggle::after {
+        content: " MENU";
+        font-size: 12px;
+        font-weight: bold;
+        margin-left: 5px;
+        color: #d97706;
     }
 
     .nav-links {
@@ -101,10 +118,11 @@ body {
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         gap: 10px;
         box-sizing: border-box;
+        z-index: 1900;      /* Dropdown Menu ထက် ညှပ်ခလုတ်က ပိုမြင့်နေစေရန် */
     }
 
     .nav-links.show {
-        display: flex;
+        display: flex !important;
     }
 
     .nav-item {
@@ -185,7 +203,7 @@ body {
 }
 
 .premium-card:hover .card-img-box img {
-    transform: scale(1.05); /* Card ပေါ် Mouse တင်လျှင် ပုံလေး အနည်းငယ် ကြည့်ကောင်းအောင် ချဲ့ပေးခြင်း */
+    transform: scale(1.05);
 }
 
 /* Balloon Section Styles */
@@ -229,13 +247,13 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #0f172a;
-    border-left: 5px solid #d97706; /* ရွှေအိုရောင် သို့ ပြောင်းလဲထားပါသည် */
+    border-left: 5px solid #d97706;
     padding-left: 12px;
     margin-bottom: 25px;
 }
 
 .btn-primary {
-    background-color: #d97706; /* စိမ်းရောင်မှ ရွှေအိုရောင် Premium သို့ ပြောင်းလဲထားပါသည် */
+    background-color: #d97706;
     color: white;
     padding: 12px 24px;
     border-radius: 10px;
@@ -246,6 +264,7 @@ body {
     border: none;
     cursor: pointer;
 }
+
 .btn-primary:hover { 
     background-color: #b45309; 
     transform: translateY(-1px);
@@ -263,7 +282,11 @@ body {
     width: fit-content;
     transition: background 0.2s;
 }
-.btn-amber:hover { background-color: #d97706; color: white; }
+
+.btn-amber:hover { 
+    background-color: #d97706; 
+    color: white; 
+}
 
 .footer {
     background-color: #0f172a;
